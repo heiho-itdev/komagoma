@@ -1,0 +1,1168 @@
+Started GET "/test/starter" for ::1 at 2021-04-17 00:18:38 +0900
+  
+ActiveRecord::ConnectionNotEstablished (Authentication plugin 'caching_sha2_password' cannot be loaded: ?w?肳?ꂽ???W???[??????????܂???B
+):
+  
+activerecord (6.1.3.1) lib/active_record/connection_adapters/mysql2_adapter.rb:45:in `rescue in new_client'
+activerecord (6.1.3.1) lib/active_record/connection_adapters/mysql2_adapter.rb:39:in `new_client'
+activerecord (6.1.3.1) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (6.1.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.3.1) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.3.1) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.3.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.3.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.3.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.3.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/test/starter" for ::1 at 2021-04-17 00:20:29 +0900
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 1181.6ms | Allocations: 43766)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/heiho-dev/apl/komagoma/public/packs
+[Webpacker] Hash: 3e1463a2ecf4a7df6e80
+Version: webpack 4.46.0
+Time: 11739ms
+Built at: 2021/04/17 0:20:51
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-36d09241d750b33652f0.js    801 KiB  application  [emitted] [immutable]  application
+js/application-36d09241d750b33652f0.js.map    937 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-36d09241d750b33652f0.js js/application-36d09241d750b33652f0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 516 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 21740.4ms | Allocations: 52312)
+Completed 200 OK in 22270ms (Views: 21751.2ms | ActiveRecord: 0.0ms | Allocations: 58322)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:20:52 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:20:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:20:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:20:55 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:20:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:20:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:20:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:20:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:20:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:20:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:21:27 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 25.8ms | Allocations: 3424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.6ms | Allocations: 7442)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.0ms | Allocations: 7858)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:21:27 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:27 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:27 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:27 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:27 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:21:28 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 14.9ms | Allocations: 3456)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.9ms | Allocations: 7466)
+Completed 200 OK in 78ms (Views: 77.4ms | ActiveRecord: 0.0ms | Allocations: 7876)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:21:28 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:28 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:28 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:21:29 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:21:29 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 22.0ms | Allocations: 3554)
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:29 +0900
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 169.2ms | Allocations: 38445)
+Completed 200 OK in 173ms (Views: 171.7ms | ActiveRecord: 0.0ms | Allocations: 38958)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:29 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:29 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:29 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:21:34 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:34 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:34 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:34 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:34 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  Rendered test/starter.html.erb within layouts/application (Duration: 84.2ms | Allocations: 4719)
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 272.0ms | Allocations: 56593)
+Completed 200 OK in 280ms (Views: 278.1ms | ActiveRecord: 0.0ms | Allocations: 57247)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:21:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:35 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:35 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:36 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:21:36 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 89.0ms | Allocations: 26397)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 203.1ms | Allocations: 52380)
+Completed 200 OK in 207ms (Views: 206.1ms | ActiveRecord: 0.0ms | Allocations: 52824)
+
+
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:36 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:36 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:36 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:36 +0900
+Started GET "/test/starter" for ::1 at 2021-04-17 00:21:36 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 125.7ms | Allocations: 36152)
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:21:37 +0900
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 297.4ms | Allocations: 68223)
+Completed 200 OK in 302ms (Views: 301.2ms | ActiveRecord: 0.0ms | Allocations: 69298)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:37 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:37 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:21:38 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 15.7ms | Allocations: 3429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.6ms | Allocations: 7440)
+Completed 200 OK in 78ms (Views: 77.0ms | ActiveRecord: 0.0ms | Allocations: 7851)
+
+
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:38 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:38 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:21:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:38 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:21:41 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:41 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:41 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:41 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:21:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 85.1ms | Allocations: 25476)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 217.1ms | Allocations: 50609)
+Completed 200 OK in 223ms (Views: 221.9ms | ActiveRecord: 0.0ms | Allocations: 51762)
+
+
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:42 +0900
+Started GET "/test/starter" for ::1 at 2021-04-17 00:21:42 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:42 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:21:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  Rendered test/starter.html.erb within layouts/application (Duration: 113.3ms | Allocations: 26955)
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 274.9ms | Allocations: 81372)
+Completed 200 OK in 280ms (Views: 278.3ms | ActiveRecord: 0.0ms | Allocations: 82387)
+
+
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:43 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:43 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:21:53 +0900
+Started GET "/test/starter" for ::1 at 2021-04-17 00:21:53 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:21:53 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:21:53 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:21:53 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+  Rendered test/starter.html.erb within layouts/application (Duration: 105.6ms | Allocations: 27087)
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 241.5ms | Allocations: 76512)
+Completed 200 OK in 247ms (Views: 245.9ms | ActiveRecord: 0.0ms | Allocations: 77620)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:21:54 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:21:54 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/index3.html" for ::1 at 2021-04-17 00:21:57 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/index3.html"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:22:02 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 17.1ms | Allocations: 3429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 81.6ms | Allocations: 7439)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.0ms | Allocations: 7844)
+
+
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:22:03 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:22:03 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:22:03 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:22:03 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:22:03 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:22:03 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:22:04 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:22:04 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:22:04 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:22:04 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:22:13 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 16.2ms | Allocations: 3429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.2ms | Allocations: 7439)
+Completed 200 OK in 68ms (Views: 67.5ms | ActiveRecord: 0.0ms | Allocations: 7849)
+
+
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:22:14 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:22:14 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:22:14 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:22:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:22:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:22:15 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:22:15 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:22:15 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:22:15 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:22:15 +0900
+  Rendered test/starter.html.erb within layouts/application (Duration: 76.4ms | Allocations: 10927)
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 249.8ms | Allocations: 61718)
+Completed 200 OK in 253ms (Views: 252.2ms | ActiveRecord: 0.0ms | Allocations: 62366)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:22:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:22:37 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:22:37 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:22:37 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:22:37 +0900
+  Rendered test/starter.html.erb within layouts/application (Duration: 55.6ms | Allocations: 3991)
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:22:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 226.4ms | Allocations: 52636)
+Completed 200 OK in 231ms (Views: 229.7ms | ActiveRecord: 0.0ms | Allocations: 53265)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:22:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/index3.html" for ::1 at 2021-04-17 00:33:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/index3.html"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:33:24 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:33:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:34:03 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 55.1ms | Allocations: 3941)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 124.0ms | Allocations: 8137)
+Completed 200 OK in 142ms (Views: 138.8ms | Allocations: 9290)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:34:03 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:34:03 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:34:04 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:34:04 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:34:04 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:34:04 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:34:05 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:34:05 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:34:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:34:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:34:14 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 40.4ms | Allocations: 3941)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 100.9ms | Allocations: 8139)
+Completed 200 OK in 112ms (Views: 109.2ms | Allocations: 9283)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:34:14 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:34:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:34:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:34:15 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:34:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:34:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:34:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:34:17 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:34:17 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:34:17 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-17 00:35:20 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 13.8ms | Allocations: 3429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.7ms | Allocations: 7439)
+Completed 200 OK in 71ms (Views: 70.5ms | Allocations: 7844)
+
+
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:35:21 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:35:21 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:35:21 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:35:21 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:35:21 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-17 00:35:21 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-17 00:35:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-17 00:35:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-17 00:35:23 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-17 00:35:23 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/login" for ::1 at 2021-04-24 23:48:56 +0900
+Started GET "/" for ::1 at 2021-04-24 23:48:56 +0900
+  [1m[35m (778.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1030.7ms | Allocations: 2752)
+Completed 200 OK in 2581ms (Views: 1201.0ms | ActiveRecord: 0.0ms | Allocations: 18443)
+
+
+Started GET "/" for ::1 at 2021-04-24 23:50:17 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.2ms | Allocations: 223)
+Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 893)
+
+
+Started GET "/test/starter" for ::1 at 2021-04-24 23:50:25 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 1416.9ms | Allocations: 18933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 1721.0ms | Allocations: 23186)
+Completed 200 OK in 1738ms (Views: 1731.5ms | ActiveRecord: 0.0ms | Allocations: 24311)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-24 23:50:27 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-24 23:50:27 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-24 23:50:28 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-24 23:50:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-24 23:50:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-24 23:50:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-24 23:50:29 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-24 23:50:29 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-24 23:50:29 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-24 23:50:30 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-24 23:50:31 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 14.2ms | Allocations: 3422)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.7ms | Allocations: 7430)
+Completed 200 OK in 69ms (Views: 68.7ms | ActiveRecord: 0.0ms | Allocations: 7841)
+
+
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-24 23:50:32 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-24 23:50:32 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-24 23:50:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-24 23:50:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-24 23:50:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/index3.html" for ::1 at 2021-04-24 23:51:10 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/index3.html"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-24 23:51:12 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 22.5ms | Allocations: 3428)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.7ms | Allocations: 7436)
+Completed 200 OK in 71ms (Views: 70.5ms | ActiveRecord: 0.0ms | Allocations: 7840)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-24 23:51:12 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-24 23:51:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-24 23:51:12 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-24 23:51:12 +0900
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-24 23:51:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-24 23:51:13 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-24 23:51:13 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-24 23:51:13 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-24 23:51:13 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-24 23:51:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-24 23:51:35 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 17.9ms | Allocations: 3427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 74.6ms | Allocations: 7436)
+Completed 200 OK in 77ms (Views: 76.3ms | ActiveRecord: 0.0ms | Allocations: 7846)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-24 23:51:35 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-24 23:51:35 +0900
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-24 23:51:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-24 23:51:36 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-24 23:51:36 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-24 23:51:37 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-24 23:51:37 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-24 23:51:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-24 23:51:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/starter" for ::1 at 2021-04-24 23:51:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+Started GET "/test/plugins/jquery/jquery.min.js" for ::1 at 2021-04-24 23:51:37 +0900
+  Rendered test/starter.html.erb within layouts/application (Duration: 109.0ms | Allocations: 22265)
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 230.9ms | Allocations: 49025)
+Completed 200 OK in 244ms (Views: 243.0ms | ActiveRecord: 0.0ms | Allocations: 52957)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for ::1 at 2021-04-24 23:51:38 +0900
+Started GET "/test/dist/css/adminlte.min.css" for ::1 at 2021-04-24 23:51:38 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2021-04-24 23:51:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for ::1 at 2021-04-24 23:51:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/" for 127.0.0.1 at 2021-06-04 11:13:19 +0900
+Started GET "/" for 127.0.0.1 at 2021-06-04 11:13:19 +0900
+  [1m[35m (357.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 87.4ms | Allocations: 363)
+Completed 200 OK in 503ms (Views: 261.8ms | ActiveRecord: 0.0ms | Allocations: 3052)
+
+
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 69.7ms | Allocations: 409)
+Completed 200 OK in 462ms (Views: 194.6ms | ActiveRecord: 0.0ms | Allocations: 2934)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-04 11:13:44 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.9ms | Allocations: 228)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 899)
+
+
+Started GET "/test/starter" for 127.0.0.1 at 2021-06-04 11:14:07 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 1252.6ms | Allocations: 18931)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 1613.3ms | Allocations: 23183)
+Completed 200 OK in 1626ms (Views: 1623.5ms | ActiveRecord: 0.0ms | Allocations: 24310)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for 127.0.0.1 at 2021-06-04 11:14:09 +0900
+Started GET "/test/dist/css/adminlte.min.css" for 127.0.0.1 at 2021-06-04 11:14:10 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for 127.0.0.1 at 2021-06-04 11:14:11 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2021-06-04 11:14:11 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for 127.0.0.1 at 2021-06-04 11:14:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for 127.0.0.1 at 2021-06-04 11:14:12 +0900
+Started GET "/test/dist/js/adminlte.min.js" for 127.0.0.1 at 2021-06-04 11:14:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for 127.0.0.1 at 2021-06-04 11:14:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2021-06-04 11:14:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for 127.0.0.1 at 2021-06-04 11:14:13 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/index3.html" for 127.0.0.1 at 2021-06-04 11:14:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/index3.html"):
+  
+Started GET "/test/starter" for 127.0.0.1 at 2021-06-04 11:14:29 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 12.3ms | Allocations: 3422)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 102.2ms | Allocations: 7435)
+Completed 200 OK in 105ms (Views: 104.3ms | ActiveRecord: 0.0ms | Allocations: 7844)
+
+
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for 127.0.0.1 at 2021-06-04 11:14:30 +0900
+Started GET "/test/dist/css/adminlte.min.css" for 127.0.0.1 at 2021-06-04 11:14:30 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for 127.0.0.1 at 2021-06-04 11:14:30 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2021-06-04 11:14:30 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for 127.0.0.1 at 2021-06-04 11:14:30 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for 127.0.0.1 at 2021-06-04 11:14:30 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for 127.0.0.1 at 2021-06-04 11:14:31 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for 127.0.0.1 at 2021-06-04 11:14:31 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2021-06-04 11:14:31 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for 127.0.0.1 at 2021-06-04 11:14:31 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/index3.html" for 127.0.0.1 at 2021-06-04 11:14:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/index3.html"):
+  
+Started GET "/test/starter" for 127.0.0.1 at 2021-06-04 11:14:44 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | Allocations: 7436)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms | Allocations: 7840)
+
+
+Started GET "/test/dist/css/adminlte.min.css" for 127.0.0.1 at 2021-06-04 11:14:44 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for 127.0.0.1 at 2021-06-04 11:14:44 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for 127.0.0.1 at 2021-06-04 11:14:45 +0900
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2021-06-04 11:14:45 +0900
+Started GET "/test/plugins/fontawesome-free/css/all.min.css" for 127.0.0.1 at 2021-06-04 11:14:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for 127.0.0.1 at 2021-06-04 11:14:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/fontawesome-free/css/all.min.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/dist/css/adminlte.min.css" for 127.0.0.1 at 2021-06-04 11:14:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/css/adminlte.min.css"):
+  
+Started GET "/test/plugins/jquery/jquery.min.js" for 127.0.0.1 at 2021-06-04 11:14:46 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/jquery/jquery.min.js"):
+  
+Started GET "/test/plugins/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2021-06-04 11:14:46 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/plugins/bootstrap/js/bootstrap.bundle.min.js"):
+  
+Started GET "/test/dist/js/adminlte.min.js" for 127.0.0.1 at 2021-06-04 11:14:46 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/test/dist/js/adminlte.min.js"):
+  
+Started GET "/test/starter" for 127.0.0.1 at 2021-06-04 11:15:14 +0900
+Processing by TestController#starter as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering test/starter.html.erb within layouts/application
+  Rendered test/starter.html.erb within layouts/application (Duration: 25.9ms | Allocations: 3427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 88.3ms | Allocations: 7435)
+Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.0ms | Allocations: 7840)
+
+
