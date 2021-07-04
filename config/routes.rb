@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'top#index'
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/login')
+  get 'log_out', to: 'sessions#destroy', as: 'log_out'
+  post 'login', to:'login#index'
+  get 'login', to:'login#index'
+  resources :sessions, only: %i[create destroy]
 end
