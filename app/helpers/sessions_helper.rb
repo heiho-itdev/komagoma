@@ -9,7 +9,10 @@ module SessionsHelper
 
   def log_in(user)
     logger.debug("SessionsHelper.log_in")
+    logger.debug("user.id↓")
+    logger.debug(user.id)
     session[:user_id] = user.id
+    logger.debug("session.user.id↓")
     logger.debug(session[:user_id])
   end
 
