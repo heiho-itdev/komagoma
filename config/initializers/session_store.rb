@@ -1,1 +1,1 @@
-Rails.application.config.session_store(secure: Rails.env.production?)
+Rails.application.config.session_store :active_record_store, :key => '_Komagoma_session'
