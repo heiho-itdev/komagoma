@@ -1,5 +1,8 @@
 module SessionsHelper
+
   def current_user
+    logger.debug("SessionsHelper.current_user")
+    logger.debug(session[:user_id])
     return unless (user_id = session[:user_id])
     @current_user ||= User.find_by(id: user_id)
   end
