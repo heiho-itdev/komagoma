@@ -3,11 +3,14 @@ class SessionsController < ApplicationController
 
   def create
     logger.debug("SessionsController.create")
-    logger.debug(auth_hash)
     if (user = User.find_or_create_from_auth_hash(auth_hash))
+      logger.debug("----------------------------------------------------------")
+      logger.debug("user = User.find_or_create_from_auth_hash(auth_hash)がtrue")
       logger.debug(user)
+      logger.debug("----------------------------------------------------------")
       log_in user
     end
+    logger.debug("-----------------redirect_to root_pathしますー------------------------")
     redirect_to root_path
   end
 
