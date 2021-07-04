@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_secure_password
+  has_secure_password validations: false
   class << self
     def find_or_create_from_auth_hash(auth_hash)
       user_params = user_params_from_auth_hash(auth_hash)
@@ -13,7 +13,7 @@ class User < ApplicationRecord
       {
         name: auth_hash.info.name,
         email: auth_hash.info.email,
-        image: auth_hash.info.image,
+        image: auth_hash.info.image
       }
     end
   end

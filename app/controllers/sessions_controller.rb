@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
-  skip_before_action :check_logged_in, only: :create
+  skip_before_action :check_logged_in, only: :create_google_user
 
-  def create
+  def create_google_user
     logger.debug("SessionsController.create")
     if (user = User.find_or_create_from_auth_hash(auth_hash))
       logger.debug("----------------------------------------------------------")
