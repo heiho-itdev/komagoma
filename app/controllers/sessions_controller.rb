@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
       logger.debug("----------------------------------------------------------")
       logger.debug("user = User.find_or_create_from_auth_hash(auth_hash)がtrue")
       logger.debug(user)
+      logger.debug(user.id)
       logger.debug("----------------------------------------------------------")
       log_in (user)
     end
