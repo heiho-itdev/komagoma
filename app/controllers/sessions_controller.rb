@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
     logger.debug("SessionsController.create")
     logger.debug(auth_hash)
     if (user = User.find_or_create_from_auth_hash(auth_hash))
+      logger.debug(user)
       log_in user
     end
     redirect_to root_path
