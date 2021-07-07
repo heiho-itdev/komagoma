@@ -1,8 +1,8 @@
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
-<!------ Include the above in your HEAD tag ---------->
+ Include the above in your HEAD tag ---------->
 
 <style>
     /*
@@ -117,6 +117,7 @@
     .btn.btn-signin {
         /*background-color: #4d90fe; */
         margin-top: 24px;
+        width: 100%;
         background-color: rgb(104, 145, 162);
         /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
         padding: 0px;
@@ -152,7 +153,7 @@
 </style>
 
 <div class="container">
-  <div class="card card-container">
+  <div class="card card-container d-grid gap-2 col-6 mx-auto">
     <!--<%= image_tag "komagoma.png", alt: "Rails icon", id: "profile-img", class: "profile-img-card"%>-->
     <h1 style="text-align: center;margin-bottom: 20px;font-family: cursive;">KOMAGOMA</h1>
     <%= form_tag("/login", method: "post", class:"form-signin") do %>
@@ -163,7 +164,7 @@
 <!--  <%= label_tag(:password_confirmation, "password_confirmation:") %>
       <%= password_field_tag(:password_confirmation) %>
       <div id="remember" class="checkbox"><label><input type="checkbox" value="remember-me">Remember me </label></div>-->
-      <%= submit_tag("ログイン", class:"btn btn-lg btn-primary btn-block btn-signin") %>
+      <%= submit_tag("ログイン", class:"btn form-signin btn-signin btn-lg") %>
     <% end %>
     <!-- /form -->
     <div style="margin-top:8px">
