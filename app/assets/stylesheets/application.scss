@@ -14,3 +14,15 @@
  *= require_self
  */
 @import "bootstrap";
+
+.btn{
+  box-shadow: 0 0 8px gray;
+}
+.btn-info {
+ background-color: burlywood;
+ border-color: burlywood;
+}
+
+.navbar{
+  box-shadow: 0 0 8px gray;
+}
