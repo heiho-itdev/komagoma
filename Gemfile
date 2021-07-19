@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'bootstrap'
+gem 'font-awesome-sass'
 
 #dbでセッション管理
 gem 'activerecord-session_store'
@@ -65,3 +66,5 @@ gem 'dotenv-rails'
 
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
+
+gem 'aws-sdk', '~> 3'

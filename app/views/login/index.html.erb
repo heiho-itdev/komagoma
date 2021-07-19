@@ -8,15 +8,19 @@
     /*
      * General styles
      */
-    body,
-    html {
+    body {
         height: 100%;
-        background-repeat: no-repeat;
         background-size: auto;
         background-size:cover;
         background-image:url(<%= asset_path "main-visual-1.jpg" %>);
         background-color:rgba(162,162,162,0.4);
         background-blend-mode:lighten;
+    }
+    html ,body{
+        height: 100%;
+        background-size: auto;
+        background-size:cover;
+
     }
 
     .card-container.card {
