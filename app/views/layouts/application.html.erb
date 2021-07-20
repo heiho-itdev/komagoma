@@ -28,7 +28,6 @@
         }
 
         #page-content-wrapper {
-            min-width: 100vw;
         }
 
         body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
@@ -69,37 +68,15 @@
     </script>
   </head>
 
-  <body class="sb-sidenav-toggled app">
-  <div class="d-flex" id="wrapper">
-    <!-- Sidebar-->
-    <div class="border-end bg-white" style="position: absolute;top: 58px;z-index: 30;" id="sidebar-wrapper">
-      <div class="list-group list-group-flush">
-        <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
-          <i class="fas fa-home"></i>&nbsp;ダッシュボード
-        <% end %>
-        <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
-          <i class="fas fa-user"></i>&nbsp;権限設定
-        <% end %>
-        <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
-          <i class="fas fa-bug"></i>&nbsp;バグマスター
-        <% end %>
-        <%= link_to floorMaster_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
-          <i class="fas fa-layer-group"></i>&nbsp;フロアマスター
-        <% end %>
-        <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
-          <i class="fas fa-paint-brush"></i>&nbsp;サインマスター
-        <% end %>
-        <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
-          <i class="fas fa-wifi"></i>&nbsp;アプリマスター
-        <% end %>
-      </div>
-    </div>
+  <body class="app">
+  <div class="" id="wrapper">
     <!-- Top navigation-->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light border-bottom" style="position: absolute;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style=";">
       <div class="container-fluid"  >
         <div class="navbar-nav mr-auto">
-          <button id="sidebarToggle" style="border:dimgrey;box-shadow: 0 0 3px gray;" onclick="document.body.classList.toggle('sb-sidenav-toggled');"><span class="navbar-toggler-icon" ></span></button>
-
+          <button id="sidebarToggle" class="d-md-none" style="border:dimgrey;box-shadow: 0 0 3px gray;" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
         <div class="" id="navbarSupportedContent">
           <ul class="navbar-nav">
@@ -117,11 +94,47 @@
         </div>
       </div>
     </nav>
+
     <!-- Page content wrapper-->
     <div id="page-content-wrapper" class="wrapper">
-      <!-- Page content-->
-      <div class="main" style="position:relative; top: 57px;">
-        <%= yield %>
+      <div class="row" style="--bs-gutter-x: 0;">
+          <!-- Sidebar-->
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" style="overflow-y: scroll;margin-top: 2px;">
+            <div class="list-group list-group-flush">
+              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+                <i class="fas fa-home"></i>&nbsp;ダッシュボード
+              <% end %>
+              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+                <i class="fas fa-user"></i>&nbsp;権限設定
+              <% end %>
+              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+                <i class="fas fa-bug"></i>&nbsp;バグマスター
+              <% end %>
+              <%= link_to floorMaster_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+                <i class="fas fa-layer-group"></i>&nbsp;フロアマスター
+              <% end %>
+              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+                <i class="fas fa-paint-brush"></i>&nbsp;サインマスター
+              <% end %>
+              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+                <i class="fas fa-wifi"></i>&nbsp;アプリマスター
+              <% end %>
+              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+                <i class="fas fa-image"></i>&nbsp;イメージテキスト抽出
+              <% end %>
+              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+                <i class="fab fa-connectdevelop"></i>&nbsp;キントーン連携
+              <% end %>
+              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+                <i class="fas fa-calendar-alt"></i>&nbsp;カレンダーマスター
+              <% end %>
+            </div>
+        </nav>
+          <!-- Page content-->
+         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="padding: 2vh">
+            <%= yield %>
+         </main>
+        </div>
       </div>
     </div>
   </div>
