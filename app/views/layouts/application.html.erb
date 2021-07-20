@@ -77,7 +77,9 @@
           <button id="sidebarToggle" class="d-md-none" style="border:dimgrey;box-shadow: 0 0 3px gray;" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <p class="d-none d-md-block navbar-nav title-font">KOMA&nbsp;<i class="fab fa-pagelines"></i>&nbsp;GOMA</p>
         </div>
+          <p class="d-md-none navbar-nav title-font">KOMA&nbsp;<i class="fab fa-pagelines"></i>&nbsp;GOMA</p>
         <div class="" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
@@ -104,28 +106,28 @@
               <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
                 <i class="fas fa-home"></i>&nbsp;ダッシュボード
               <% end %>
-              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+              <%= link_to permissionSettings_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
                 <i class="fas fa-user"></i>&nbsp;権限設定
               <% end %>
-              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+              <%= link_to bugMaster_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
                 <i class="fas fa-bug"></i>&nbsp;バグマスター
               <% end %>
               <%= link_to floorMaster_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
                 <i class="fas fa-layer-group"></i>&nbsp;フロアマスター
               <% end %>
-              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+              <%= link_to signMaster_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
                 <i class="fas fa-paint-brush"></i>&nbsp;サインマスター
               <% end %>
-              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+              <%= link_to appMaster_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
                 <i class="fas fa-wifi"></i>&nbsp;アプリマスター
               <% end %>
-              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+              <%= link_to textExtraction_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
                 <i class="fas fa-image"></i>&nbsp;イメージテキスト抽出
               <% end %>
-              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+              <%= link_to kintoneConnect_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
                 <i class="fab fa-connectdevelop"></i>&nbsp;キントーン連携
               <% end %>
-              <%= link_to dashboard_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
+              <%= link_to calendarTools_path , class: "list-group-item list-group-item-action list-group-item-light p-3" do %>
                 <i class="fas fa-calendar-alt"></i>&nbsp;カレンダーマスター
               <% end %>
             </div>

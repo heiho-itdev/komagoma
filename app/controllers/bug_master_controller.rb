@@ -1,0 +1,2 @@
+class BugMasterController < ApplicationController
+end

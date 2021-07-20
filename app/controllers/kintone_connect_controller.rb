@@ -1,0 +1,2 @@
+class KintoneConnectController < ApplicationController
+end
