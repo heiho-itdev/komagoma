@@ -13,3 +13,4 @@ import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
 import 'bootstrap'
+require("./calendar/event")
