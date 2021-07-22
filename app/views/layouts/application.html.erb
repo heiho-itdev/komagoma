@@ -3,7 +3,7 @@
   <head>
     <title>Komagoma</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -48,6 +48,9 @@
 
             #sidebarMenu {
                 width: 220px;
+                -moz-box-shadow: 0px 0px 8px gray;
+                -webkit-box-shadow: 0px 8px grey;
+                box-shadow: 0 0 8px grey;
             }
 
         }
