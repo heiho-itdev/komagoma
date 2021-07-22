@@ -4,54 +4,39 @@
     <title>Komagoma</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <%= javascript_pack_tag 'application' %>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
     <style>
-        #sidebar-wrapper {
-            min-height: 100vh;
-            margin-left: 0;
-            transition: margin 0.25s ease-out;
-        }
 
-        #sidebar-wrapper .sidebar-heading {
+        #sidebar-wrapper {
             padding: 0.875rem 1.25rem;
             font-size: 1.2rem;
         }
 
-        #sidebar-wrapper .list-group {
+        #sidebar-wrapper {
             width: 12rem;
         }
 
         #page-content-wrapper {
         }
 
-        body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
-          margin-left: -12rem;
-        }
 
-        #main {
+        #main-cont {
             width:100%;
         }
         @media (min-width: 768px) {
-            #main {
+            #main-cont {
                 width: calc(100% - 220px);
             }
-            #sidebar-wrapper {
-                margin-left: 0;
-            }
+
 
             #page-content-wrapper {
                 min-width: 0;
                 width: 100%;
-            }
-
-            body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
-                margin-left: -12rem;
             }
 
             #sidebarMenu {
@@ -59,14 +44,6 @@
             }
 
         }
-
-        .modal.fade {
-            transition-duration: 0.1s;
-        }
-
-          .modal.in {
-              transition-duration: 0.1s;
-          }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2J6LJP5HZ5"></script>
@@ -82,7 +59,7 @@
   <body class="app">
   <div class="" id="wrapper">
     <!-- Top navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style=";">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
       <div class="container-fluid"  >
         <div class="navbar-nav mr-auto">
           <button id="sidebarToggle" class="d-md-none" style="border:dimgrey;box-shadow: 0 0 3px gray;" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,7 +72,7 @@
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_user.name %></a>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="opacity:1">
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i>&nbsp;ユーザー設定</a>
                 <div class="dropdown-divider"></div>
                 <%= link_to  log_out_path , class: "dropdown-item" do %>
@@ -145,7 +122,7 @@
         </nav>
 
           <!-- Page content pc-->
-         <main id ="main" style="padding: 2vh 4vh;">
+         <main id ="main-cont" style="padding: 2vh 4vh;">
             <%= yield %>
          </main>
         </div>

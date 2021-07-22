@@ -4,15 +4,14 @@ import monthGridPlugin from '@fullcalendar/daygrid'
 import googleCalendarApi from '@fullcalendar/google-calendar'
 
 
-document.addEventListener('turbolinks:load', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const calendarEl = document.getElementById('calendar');
+    //カレンダーなしの場合リターン
+    if(!calendarEl) return;
 
-    //カレンダーの中身を設定(月表示とか、クリックアクション起こしたいとか、googleCalendar使うととか)
     const calendar = new Calendar(calendarEl, {
         plugins: [monthGridPlugin, interactionPlugin, googleCalendarApi],
-
-
-        //細かな表示設定
+        //プロパティ
         locale: 'ja',
         timeZone: 'Asia/Tokyo',
         firstDay: 1,
@@ -30,13 +29,13 @@ document.addEventListener('turbolinks:load', function() {
         height: "auto",
 
         dateClick: function (info) {
-            //日付をクリックしたときのイベント(詳しくは次回の記事へ)
+            //日付クリックしたときのイベント
         },
         eventClick: function (info) {
-            //表示されたイベントをクリックしたときのイベント(詳しくは次回の記事へ)
+            //表示されたイベントをクリックしたときのイベント
         },
         eventClassNames: function (arg) {
-            //表示されたイベントにclassをcss用に追加する(詳しくは次回の記事へ)
+            //表示されたイベントにclassをcss用に追加する
         }
 
     });
